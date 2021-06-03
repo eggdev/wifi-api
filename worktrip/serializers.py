@@ -1,14 +1,8 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import serializers
+from worktrip.models import Location
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class LocationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = User
-        fields = ["url", "username", "email", "groups"]
-
-
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Group
-        fields = ["url", "name"]
+        model = Location
+        fields = ["name"]
