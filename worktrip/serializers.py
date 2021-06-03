@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from worktrip.models import Location
+from worktrip.models import Venue
 
 
-class LocationSerializer(serializers.HyperlinkedModelSerializer):
+class VenueSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Location
-        fields = ["name"]
+        model = Venue
+        fields = ["name", "download_speed", "upload_speed", "venue_type", "venue_url"]

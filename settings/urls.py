@@ -22,7 +22,7 @@ from worktrip import views as worktrip_views
 router = routers.DefaultRouter()
 router.register(r"users", user_views.UserViewSet)
 router.register(r"groups", user_views.GroupViewSet)
-router.register(r"locations", worktrip_views.LocationViewSet)
+router.register(r"locations", worktrip_views.VenueViewSet)
 
 
 urlpatterns = [

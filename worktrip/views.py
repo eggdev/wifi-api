@@ -1,12 +1,12 @@
 from rest_framework import viewsets, permissions
-from worktrip.models import Location
-from worktrip.serializers import LocationSerializer
+from worktrip.models import Venue
+from worktrip.serializers import VenueSerializer
 
 
-class LocationViewSet(viewsets.ModelViewSet):
+class VenueViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
 
-    queryset = Location.objects.all().order_by("-created_date")
-    serializer_class = LocationSerializer
+    queryset = Venue.objects.all().order_by("-created_date")
+    serializer_class = VenueSerializer
